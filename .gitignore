@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.env
+.env.local
+*.tsbuildinfo
+next-env.d.ts
+__pycache__
+.venv
+test-results
+playwright-report
+public/vendor
+.pytest_cache
+backend/*.db

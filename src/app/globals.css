@@ -1,0 +1,47 @@
+@import "maplibre-gl/dist/maplibre-gl.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forest: #173f35;
+  --ivory: #f5f5ed;
+  --botanical: #8ead82;
+  --charcoal: #202620;
+  --font-manrope: "Manrope Variable";
+  --font-inter: "Inter Variable";
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-display { font-family: var(--font-manrope), system-ui, sans-serif; letter-spacing: -0.02em; }
+
+:focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; border-radius: 4px; }
+.on-forest :focus-visible { outline-color: var(--ivory); }
+
+/* editorial numerals */
+.numeral { font-family: var(--font-manrope), system-ui, sans-serif; font-variant-numeric: tabular-nums lining-nums; letter-spacing: -0.04em; line-height: 0.95; }
+
+.prose-canopy p { max-width: 62ch; line-height: 1.65; }
+.prose-canopy h2 { margin-top: 2.5rem; font-size: 1.5rem; font-weight: 700; }
+.prose-canopy h3 { margin-top: 1.5rem; font-size: 1.1rem; font-weight: 700; }
+.prose-canopy ul { list-style: disc; padding-left: 1.25rem; max-width: 62ch; line-height: 1.65; }
+.prose-canopy li { margin: 0.25rem 0; }
+.prose-canopy code { background: #e9ebdf; padding: 0 0.3em; border-radius: 3px; font-size: 0.9em; }
+.prose-canopy table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+.prose-canopy th, .prose-canopy td { border-bottom: 1px solid rgba(32,38,32,.15); padding: .5rem .5rem .5rem 0; text-align: left; vertical-align: top; }
+
+.maplibregl-popup-content { background: var(--ivory); color: var(--charcoal); border-radius: 6px; padding: 8px 10px; font-size: 12px; box-shadow: 0 1px 6px rgba(0,0,0,.18); }
+.maplibregl-popup-tip { display: none; }
+.maplibregl-ctrl-attrib { font-size: 10px; }
+
+input[type="range"] { accent-color: var(--forest); }
